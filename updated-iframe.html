@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeMarket - IFRAME מעודכן</title>
+    <style>
+        /* איפוס מלא */
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+        
+        html, body {
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+        }
+        
+        .iframe-container {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+        
+        .iframe-container iframe {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            border: none !important;
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe 
+            style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; border: none !important;" 
+            title="HomeMarket" 
+            src="https://extraordinary-cobbler-480644.netlify.app/" 
+            allowfullscreen="allowfullscreen">
+        </iframe>
+    </div>
+</body>
+</html>
