@@ -42,8 +42,6 @@ export interface Property {
   מעלית?: string;
   מחסן?: string;
   תיאור_הנכס?: string;
-  // עמודות חדשות מהמיפוי המעודכן
-  אודות_הנכס?: string;
   עודכן_בתאריך?: string;
 }
 
@@ -62,6 +60,10 @@ export interface FilterState {
   סטטוס: string;
   מגייס: string;
   פרויקט: string[];
+  priceRange: [number, number];
+  roomsRange: [number, number];
+  floorRange: [number, number];
+  areaRange: [number, number];
 }
 
 export type SortField = 'מחיר_מבוקש' | 'שכונה' | 'שטח_דירה' | 'מספר_חדרים' | 'עיר' | 'קומה';

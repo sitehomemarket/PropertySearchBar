@@ -21,9 +21,13 @@ const initialFilters: FilterState = {
   שכונה: [],
   מספר_חדרים: [],
   סוג_נכס: [],
-  סטטוס: '',
+  סטטוס: 'דירה בשיווק',
   מגייס: '',
   פרויקט: [],
+  priceRange: [0, 20000000],
+  roomsRange: [1, 10],
+  floorRange: [0, 100],
+  areaRange: [0, 700],
 };
 
 const App: React.FC = () => {
@@ -162,7 +166,7 @@ const App: React.FC = () => {
       <main className="h-[calc(100vh-64px)] flex flex-col">
         {/* Filters Section */}
         {filtersEnabled && (
-          <div className="bg-white border-b border-gray-200 px-4 py-1 flex-shrink-0 relative z-20" style={{ maxHeight: '15vh' }}>
+          <div className="bg-white border-b border-gray-200 px-4 py-1 flex-shrink-0 relative z-20">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-4">
                 <h2 className="text-xs font-bold text-[#222222]">

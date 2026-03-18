@@ -670,6 +670,26 @@ export function useProperties() {
       if (filters.מגייס && property.מגייס !== filters.מגייס) return false;
       if (filters.פרויקט?.length && !filters.פרויקט.includes(property.פרויקט)) return false;
 
+      if (filters.priceRange) {
+        const [min, max] = filters.priceRange;
+        if (property.מחיר_מבוקש < min || property.מחיר_מבוקש > max) return false;
+      }
+
+      if (filters.roomsRange) {
+        const [min, max] = filters.roomsRange;
+        if (property.מספר_חדרים < min || property.מספר_חדרים > max) return false;
+      }
+
+      if (filters.floorRange) {
+        const [min, max] = filters.floorRange;
+        if (property.קומה < min || property.קומה > max) return false;
+      }
+
+      if (filters.areaRange) {
+        const [min, max] = filters.areaRange;
+        if (property.שטח_דירה < min || property.שטח_דירה > max) return false;
+      }
+
       return true;
     });
   }, [properties]);
